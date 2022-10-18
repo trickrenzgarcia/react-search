@@ -10,8 +10,7 @@ const Table = ({ datas }) => {
           <th>Email</th>
         </tr>
         {datas.map((data) => (
-          <tr key={data.id}>
-            <td>{data.name}</td>
+          <tr key={data.uid}>
             <td>{data.username}</td>
             <td>{data.email}</td>
           </tr>

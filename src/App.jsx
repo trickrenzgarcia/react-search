@@ -10,10 +10,10 @@ function App() {
   const [datas, setDatas] = useState([])
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users').then(res => setDatas(res.data))
+    axios.get('http://localhost:5000/users').then(res => setDatas(res.data))
   }, [])
 
-  const keys = ['name', 'username', 'email']
+  const keys = ['username', 'email']
 
   const search = (data) => {
     return data.filter((q) => keys.some(key => q[key].toLowerCase().includes(query.toLowerCase())))
